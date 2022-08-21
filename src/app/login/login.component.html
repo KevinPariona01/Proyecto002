@@ -1,0 +1,43 @@
+<div>
+    <div>
+        <div class="container-login" >
+            <div class="container-login-user" >
+                <img src="./assets/resources/login.png" width="200" height="200">
+            </div>
+            <div class="container-login-options" >
+                <form (ngSubmit)="login()" >
+                    <ul>
+                        <li><input  class="input-user" type="email" name="input-email" placeholder="usuario" [(ngModel)]="email" ></li>
+                        <li><input class="input-password" type="password" name="input-password" placeholder="contraseña" [(ngModel)]="password" ></li>
+                        <li><button type="submit" class="btn-options" >Ingresar</button></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-header-login">
+        <div><app-header [title]="title" ></app-header></div>
+        <div class="container-background" >
+        </div>
+        <div class="container-footer" >
+            <legend class="legend-footer" >CONTACTOS</legend>
+            <table class="table" >
+                <tr>
+                    <td class="table-data" >Gmtip01@gmail.com</td>
+                    <td class="table-img" ><img src="./assets/resources/gmail.png" width="40" height="40" ></td>
+                </tr>
+                <tr> 
+                    <td class="table-data" >Mtip01@hotmail.com</td>
+                    <td class="table-img" ><img src="./assets/resources/hotmail.png" width="40" height="40" ></td>
+                </tr>
+                <tr>
+                    <td class="table-data" >+51 992258052</td>
+                    <td class="table-img" ><img src="./assets/resources/whatsapp.png" width="40" height="40" ></td>
+                </tr>
+            </table>
+            <p class="note" >Nota: user: admin@gmail.com | password: 123456</p>
+        </div>  
+    </div>
+</div>
+
+

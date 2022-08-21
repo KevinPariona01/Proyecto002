@@ -1,0 +1,15 @@
+<div class="container-header">
+    <div class="container-config">
+            <p *ngIf="isLoggedIn" class="paf-name" >{{loggedInUser}}</p>
+            <p *ngIf="isLoggedIn" class="paf-leave" ><a  class="btn btn-danger" (click)="logout()" >Salir</a></p>
+    </div>
+    <div class="container-title" >
+        <h2>{{title}}</h2>
+    </div>
+    <div *ngIf="isLoggedIn" class="container-balance" >
+            <p class="paf-balance">Total saldo</p>
+            <p class="paf-amount" *ngFor="let balance of balances" >{{balance.balance}}</p>
+    </div>
+    <div *ngIf="!isLoggedIn" class="container-balance-login" >
+    </div>
+</div>

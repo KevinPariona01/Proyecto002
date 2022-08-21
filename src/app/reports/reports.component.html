@@ -1,0 +1,43 @@
+<div>
+    <div><app-panel-menu></app-panel-menu></div>
+    <div class="container-header-reports">
+        <div><app-header [title]="title" ></app-header></div>
+        <div class="container-reports" >
+            <div class="container-income-statistics" >
+                <ngx-charts-bar-vertical
+                [view]="view"
+                [results]="incomeData"
+                [gradient]="gradientIncome"
+                [xAxis]="showXAxisIncome"
+                [yAxis]="showYAxisIncome"
+                [legend]="showLegendIncome"
+                [showXAxisLabel]="showXAxisLabelIncome"
+                [showYAxisLabel]="showYAxisLabelIncome"
+                [xAxisLabel]="xAxisLabelIncome"
+                [yAxisLabel]="yAxisLabelIncome" class="income" >
+                </ngx-charts-bar-vertical> 
+                <div class="btn-graph" >
+                    <button  class="btn btn-success" (click)="ShowIncome()" >INGRESOS</button>
+                </div>
+            </div>
+            <div class="container-expense-statistics" >
+                <ngx-charts-bar-vertical
+                [view]="view"
+                [results]="expenseData"
+                [gradient]="gradientExpense"
+                [xAxis]="showXAxisExpense"
+                [yAxis]="showYAxisExpense"
+                [legend]="showLegendExpense"
+                [showXAxisLabel]="showXAxisLabelExpense"
+                [showYAxisLabel]="showYAxisLabelExpense"
+                [xAxisLabel]="xAxisLabelExpense"
+                [yAxisLabel]="yAxisLabelExpense" class="expense" >
+                </ngx-charts-bar-vertical> 
+                <div class="btn-graph" >
+                    <button  class="btn btn-danger" (click)="ShowExpense()" >EGRESOS</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+

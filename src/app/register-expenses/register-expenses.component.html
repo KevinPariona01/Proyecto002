@@ -1,0 +1,25 @@
+<div>
+    <div><app-panel-menu></app-panel-menu></div>
+    <div class="container-header-expenses">
+        <div><app-header [title]="title" ></app-header></div>
+        <div class="container-register-expenses">
+            <div class="container-table" >
+                <table class="table" >
+                    <tr class="table-header">
+                        <td>Monto:</td>
+                        <td>Descripcion:</td>
+                        <td>Fecha:</td>
+                        <td colspan="2" >Opciones</td>
+                    </tr>
+                    <tr *ngFor="let expense of expenses; let i = index"  class="table-list" >
+                        <td>{{expense.amount}}</td>
+                        <td>{{expense.description}}</td>
+                        <td>{{expense.date}}</td>
+                        <td><a class="btn btn-outline-success" href="/panel/edit-expense/{{expense.id}}" >Editar</a></td>
+                        <td><button class="btn btn-outline-danger" (click)="deleteExpenses(expense.id)" >Eliminar</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

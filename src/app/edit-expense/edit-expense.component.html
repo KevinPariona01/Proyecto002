@@ -1,0 +1,29 @@
+<div>
+    <div><app-panel-menu></app-panel-menu></div>
+    <div class="container-header-expenses">
+        <div><app-header [title]="title" ></app-header></div>
+            <div class="container-edit-expense" >
+                <div class="container-table" >
+                    <form #expenseForm="ngForm" (ngSubmit)="editExpense(expenseForm)" >
+                        <table class="table" >
+                            <tr>
+                                <td class="table-header" >Monto</td>
+                                <td class="table-list" ><input type="number" name="input-amount" class="input-amount"  [(ngModel)]="expense.amount"  [ngModelOptions]="{standalone: true}" ></td>
+                            </tr>
+                            <tr>
+                                <td class="table-header" >Descripcion</td>
+                                <td class="table-list" ><textarea name="input-description" class="input-description" [(ngModel)]="expense.description" [ngModelOptions]="{standalone: true}" ></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="table-header" >date</td>
+                                <td class="table-list" ><input type="date" class="input-date" [(ngModel)]="expense.date" [ngModelOptions]="{standalone: true}" ></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" ><input type="submit" class="btn btn-outline-primary" value="Guardar" ></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+    </div>
+</div>

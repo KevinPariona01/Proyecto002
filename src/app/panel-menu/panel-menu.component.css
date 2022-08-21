@@ -1,0 +1,34 @@
+.container-panel{
+    background-color: #2A3132;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    overflow-y: scroll;
+}
+.container-panel-user{
+    padding: 3%;
+    text-align: center;
+}
+.container-panel-options{
+    text-align: center;
+    padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.container-panel-options li{
+    list-style-type: none;
+    padding: 2%;
+}
+.btn-options{
+    width: 80%;
+    height: 60px;
+    border-radius: 5px;
+    overflow: auto;
+    background-color: #763626;
+    color: white;
+    font-weight: 500;
+}
+.btn-options:hover{
+    background-color: white;
+    color: #763626;
+}

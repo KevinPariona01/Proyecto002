@@ -1,0 +1,27 @@
+<div>
+    <div><app-panel-menu></app-panel-menu></div>
+    <div class="container-header-income">
+        <div><app-header [title]="title" ></app-header></div>
+        <div class="container-register-income">
+            <div class="container-table" >
+                <table class="table" >
+                    <tr class="table-header">
+                        <td>Monto:</td>
+                        <td>Descripcion:</td>
+                        <td>Fecha:</td>
+                        <td colspan="2" >Opciones</td>
+                        <td></td>
+                    </tr>
+                    <tr *ngFor="let income of incomes; let i = index"  class="table-list" >
+                        <td>{{income.amount}}</td>
+                        <td>{{income.description}}</td>
+                        <td>{{income.date}}</td>
+                        <td><a class="btn btn-outline-success" href="/panel/edit-income/{{income.id}}" >Editar</a></td>
+                        <td><button class="btn btn-outline-danger"  (click)="deleteIncome(income.id)" >Eliminar</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
